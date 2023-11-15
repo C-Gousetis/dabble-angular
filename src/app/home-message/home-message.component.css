@@ -4,13 +4,12 @@
 }
 
 .container {
-    margin: 50px 0 0 25px;
     height: fit-content;
-    width: 40%;
+    width: 75%;
     padding: 10px;
     overflow: visible;
     
-    font-family: Candara;
+    font-family: Candara, serif;
     color: rgba(110, 38, 14);
     
     background-image: url(../../assets/images/backgrounds/OLD_PAPER_TEXTURE.jpg);
