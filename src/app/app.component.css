@@ -18,10 +18,17 @@
     padding: 50px 25px;
     width: 100%;
 
-    border: 5px solid aqua;
-
 
     display: flex;
-    flex-flow: row wrap;
-    align-content: space-around;
+    justify-content: space-evenly;
+    
+    
+}
+
+@media screen and (max-width:900px) {
+    .content {
+        flex-wrap: wrap;
+        row-gap: 50px;
+    }
+    
 }

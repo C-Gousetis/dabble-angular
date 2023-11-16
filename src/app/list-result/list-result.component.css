@@ -5,8 +5,9 @@
 }
 
 .container {
-    height: 700px;
-    width: 700px;
+    height: 800px;
+    width: 500px;
+    padding-top: 30px;
 
     background-image: url(../../assets/images/backgrounds/OLD_PAPER_TEXTURE.jpg);
     background-size: cover;
@@ -16,6 +17,7 @@
 
     display: flexbox;
     justify-content: center;
+
 }
 
 h3, h4 {
@@ -41,13 +43,21 @@ h3, h4 {
     
 }
 
-.name-list {
-    height: 500px;
+.namepad {
+    height: 570px;
     width: 500px;
-    margin: 20px 0;
+    margin: 20px 0 20px 40px;
 
-    border: 1px solid black;
+    border: 1px solid transparent;
 
-    background-image: url(../../assets/images/clipboard_clear.png);
-    background-size: contain;
+    background-image: url(../../assets/images/notepad_plus_pen.png);
+    background-size:cover;
+    
+}
+
+.name-list {
+    margin: 130px 0 0 100px;
+    list-style-type: none;
+    font-family: Candara, serif;
+    font-size: larger;
 }
