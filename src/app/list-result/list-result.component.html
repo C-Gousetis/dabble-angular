@@ -2,17 +2,19 @@
     <h3>Choose a gender</h3>
 
     <div class="buttons">
-        <button class="get-button">Male</button>
-        <button class="get-button">Female</button>
+        <button (click)="apiFetchData()" class="get-button">Male</button>
+        <button (click)="apiFetchData()" class="get-button">Female</button>
     </div>
 
-    <h4>&#8600; &nbsp; &nbsp; &nbsp; &nbsp; Here are 10 random names &nbsp; &nbsp; &nbsp; &nbsp; &#8601;</h4>
+    <div *ngIf="isVisible">
+        <h4>&#8600; &nbsp; &nbsp; &nbsp; &nbsp; Here are 10 random names &nbsp; &nbsp; &nbsp; &nbsp; &#8601;</h4>
 
-    <div class="namepad">
-        <div class="name-box">
-            <ul class="name-list" *ngFor="let item of data">
-                <li> {{ item.id }}</li>
-            </ul>
+        <div class="namepad">
+            <div class="name-box">
+                <ul class="name-list" *ngFor="let item of data">
+                    <li> {{ item.id }}</li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

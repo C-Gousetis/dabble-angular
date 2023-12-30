@@ -11,6 +11,9 @@ export class NamesService {
   getData()
   {
     let url = "https://jsonplaceholder.typicode.com/todos";
+    // let url = "#";
     return this.http.get(url);
   }
+
+  
 }

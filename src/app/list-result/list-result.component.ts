@@ -11,6 +11,7 @@ import {NamesService} from '../names.service';
 })
 export class ListResultComponent {
 
+
   data: any;
   constructor(@Optional() public name: NamesService) {
 
@@ -18,6 +19,12 @@ export class ListResultComponent {
       console.warn(data);
       this.data = data;
     })
+  }
+
+  isVisible = false;
+  apiFetchData() {
+    this.isVisible = true;
+    this.name.getData();
   }
 
 }
