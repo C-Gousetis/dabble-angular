@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeMessageComponent } from './home-message/home-message.component';
@@ -16,14 +16,6 @@ import {NamesService} from './names.service';
   
 })
 export class AppComponent {
-  title = 'angular-dabble';
+  title = 'CF Project';
 
-  data: any;
-  constructor(private name: NamesService) {
-
-    this.name.getData().subscribe(data => {
-      console.warn(data);
-      this.data = data;
-    })
-  }
 }
