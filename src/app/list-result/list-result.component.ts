@@ -1,6 +1,7 @@
 import { Component, Inject, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {NamesService} from '../names.service';
+import { MaleNamesService } from '../male-names.service';
 
 @Component({
   selector: 'app-list-result',
@@ -13,18 +14,29 @@ export class ListResultComponent {
 
 
   data: any;
-  constructor(@Optional() public name: NamesService) {
+  constructor(@Optional() public female: NamesService, public male : MaleNamesService) {
 
-    this.name.getData().subscribe(data => {
+    this.female.getData().subscribe(data => {
+      console.warn(data);
+      this.data = data;
+    })
+
+    this.male.getData().subscribe(data => {
       console.warn(data);
       this.data = data;
     })
   }
 
+  
+
   isVisible = false;
-  apiFetchData() {
+  apiFetchData(genderId : boolean) {
     this.isVisible = true;
-    this.name.getData();
+    if (genderId == false) {
+      this.female.getData();  
+    } else {
+      this.male.getData();
+    }
   }
 
 }

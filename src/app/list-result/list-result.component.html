@@ -2,8 +2,8 @@
     <h3>Choose a gender</h3>
 
     <div class="buttons">
-        <button (click)="apiFetchData()" class="get-button">Male</button>
-        <button (click)="apiFetchData()" class="get-button">Female</button>
+        <button (click)="apiFetchData(false)" class="get-button">Male</button>
+        <button (click)="apiFetchData(true)" class="get-button">Female</button>
     </div>
 
     <div *ngIf="isVisible">
