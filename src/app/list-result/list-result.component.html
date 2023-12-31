@@ -2,8 +2,8 @@
     <h3>Choose a gender</h3>
 
     <div class="buttons">
-        <button (click)="apiFetchData(false)" class="get-button">Male</button>
-        <button (click)="apiFetchData(true)" class="get-button">Female</button>
+        <button (click)="apiFetchData(true)" class="get-button">Male</button>
+        <button (click)="apiFetchData(false)" class="get-button">Female</button>
     </div>
 
     <div *ngIf="isVisible">
@@ -12,7 +12,7 @@
         <div class="namepad">
             <div class="name-box">
                 <ul class="name-list" *ngFor="let item of data">
-                    <li> {{ item.id }}</li>
+                    <li> {{ item.name }}</li>
                 </ul>
             </div>
         </div>

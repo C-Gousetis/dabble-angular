@@ -10,7 +10,7 @@ export class MaleNamesService {
 
   getData()
   {
-    let url = "https://localhost:7158/api/Names?genderId=false";
+    let url = "https://localhost:7158/api/Names?genderId=true";
     return this.http.get(url);
   }
 }
